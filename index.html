@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochi & Maple | Cozy Little Café</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">☕</div>
+            <div>
+                <h1>Mochi <span>&</span> Maple</h1>
+                <p>your little cozy corner</p>
+            </div>
+        </div>
+<button id="recipeBookButton" class="book-button">
+  📖 Recipe Book
+</button>
+        <div class="top-stats">
+            <div class="stat">
+                <span>🪙</span>
+                <div>
+                    <small>YOUR COINS</small>
+                    <strong id="coinCount">0</strong>
+                </div>
+            </div>
+            <div class="stat">
+                <span>🧾</span>
+                <div>
+                    <small>ORDERS SERVED</small>
+                    <strong id="orderCount">0</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="game-layout">
+
+        <!-- CAFÉ SCENE -->
+        <section class="cafe-scene">
+
+            <div class="scene-heading">
+                <span class="open-label"><span class="open-dot"></span> OPEN</span>
+                <span class="scene-time">A lovely day for coffee ☀️</span>
+            </div>
+
+            <div class="cafe-window">
+                <div class="window-sky">
+                    <div class="sun"></div>
+                    <div class="cloud cloud-one"></div>
+                    <div class="cloud cloud-two"></div>
+                    <div class="distant-hills"></div>
+                </div>
+                <div class="window-frame vertical"></div>
+                <div class="window-frame horizontal"></div>
+            </div>
+
+            <div class="hanging-lights">
+                <div class="hanging-lamp"><span></span></div>
+                <div class="hanging-lamp"><span></span></div>
+                <div class="hanging-lamp"><span></span></div>
+            </div>
+
+            <div class="wall-shelf">
+                <span>🪴</span>
+                <span>📚</span>
+                <span>🫙</span>
+                <span>🌿</span>
+            </div>
+
+            <div class="cafe-sign">
+                <span>✿</span> Fresh coffee, warm hearts <span>✿</span>
+            </div>
+
+            <div class="customer-area">
+                <div class="customer-speech" id="customerSpeech">
+                    Hello! I'd love something delicious.
+                </div>
+
+                <div class="customer">
+                    <div class="customer-head">
+                        <div class="hair"></div>
+                        <div class="face">
+                            <span class="eye eye-left"></span>
+                            <span class="eye eye-right"></span>
+                            <span class="cheek cheek-left"></span>
+                            <span class="cheek cheek-right"></span>
+                            <span class="smile"></span>
+                        </div>
+                    </div>
+                    <div class="customer-body"></div>
+                </div>
+
+                <div class="customer-name" id="customerName">A little visitor</div>
+            </div>
+
+            <div class="counter">
+                <div class="counter-top">
+                    <div class="counter-decoration">🥐</div>
+                    <div class="counter-decoration">🍰</div>
+                    <div class="counter-decoration">🌷</div>
+                    <div class="counter-decoration">🫙</div>
+                </div>
+                <div class="counter-front">
+                    <span>MOCHI & MAPLE</span>
+                </div>
+            </div>
+
+            <div class="floor-plants plant-left">🪴</div>
+            <div class="floor-plants plant-right">🌿</div>
+
+        </section>
+
+        <!-- GAME PANEL -->
+        <aside class="game-panel">
+
+            <section class="order-card">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">A CUSTOMER IS WAITING</span>
+                        <h2>Today's Order</h2>
+                    </div>
+                    <span class="order-icon">♡</span>
+                </div>
+
+                <div class="order-details">
+                    <div class="order-drink-icon" id="orderIcon">☕</div>
+                    <div>
+                        <h3 id="orderDrink">Maple Latte</h3>
+                        <p id="orderDescription">A warm, sweet little treat.</p>
+                    </div>
+                </div>
+
+                <div class="order-reward">
+                    <span>Reward for this order</span>
+                    <strong>+15 🪙</strong>
+                </div>
+            </section>
+
+            <section class="preparation-card">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">THE LITTLE KITCHEN</span>
+                        <h2>Make the Drink</h2>
+                    </div>
+                    <span class="chef-icon">👩🏻‍🍳</span>
+                </div>
+
+                <p class="instruction">
+                    Choose the ingredients to prepare your customer's order.
+                </p>
+
+                <div class="ingredient-title">AVAILABLE INGREDIENTS</div>
+
+                <div class="ingredients-grid" id="ingredientsGrid">
+                    <button class="ingredient" data-ingredient="espresso">
+                        <span>☕</span><small>Espresso</small>
+                    </button>
+                    <button class="ingredient" data-ingredient="matcha">
+                        <span>🍵</span><small>Matcha</small>
+                    </button>
+                    <button class="ingredient" data-ingredient="milk">
+                        <span>🥛</span><small>Milk</small>
+                    </button>
+                    <button class="ingredient" data-ingredient="oat">
+                        <span>🌾</span><small>Oat Milk</small>
+                    </button>
+                    <button class="ingredient" data-ingredient="maple">
+                        <span>🍁</span><small>Maple</small>
+                    </button>
+                    <button class="ingredient" data-ingredient="vanilla">
+                        <span>🤍</span><small>Vanilla</small>
+                    </button>
+                    <button class="ingredient" data-ingredient="ice">
+                        <span>🧊</span><small>Ice</small>
+                    </button>
+                    <button class="ingredient" data-ingredient="cream">
+                        <span>🍦</span><small>Cream</small>
+                    </button>
+                </div>
+
+                <div class="cup-area">
+                    <div class="cup-label">YOUR DRINK</div>
+                    <div class="cup" id="cup">
+                        <div class="cup-content" id="cupContent">
+                            <span class="cup-emoji">☕</span>
+                        </div>
+                    </div>
+                    <div class="cup-base"></div>
+                    <div class="selected-count" id="selectedCount">
+                        No ingredients selected yet
+                    </div>
+                </div>
+
+                <div class="selected-ingredients" id="selectedIngredients">
+                    <!-- Selected ingredients appear here -->
+                </div>
+
+                <div class="action-buttons">
+                    <button class="clear-button" id="clearButton">
+                        ↻ Clear
+                    </button>
+                    <button class="serve-button" id="serveButton">
+                        Serve Order <span>♡</span>
+                    </button>
+                </div>
+
+                <p class="game-message" id="gameMessage">
+                    Your little café adventure starts here!
+                </p>
+            </section>
+<div class="book-overlay" id="recipeBook">
+  <div class="recipe-book">
+    <button class="close-book" id="closeBook">✕</button>
+
+    <h2>📖 Mochi & Maple</h2>
+    <p class="book-subtitle">The Little Café Recipe Book</p>
+
+    <div id="recipePages" class="recipe-pages"></div>
+  </div>
+</div>
+            <div class="menu-note">
+                <span>🌼</span>
+                <p>Made with love, served with a little magic.</p>
+            </div>
+
+        </aside>
+    </main>
+
+    <footer>
+        <p>© 2026 Mochi & Maple · A little cup of happiness ♡</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
